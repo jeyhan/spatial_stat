@@ -1,5 +1,4 @@
 import numpy as np
-from utils import data_utils
 from utils import math_utils
 from utils import params_utils
 
@@ -31,9 +30,7 @@ def predict_point_by_exclude_i(z, i, neighbor_index_list, v_matrix_inv):
     return y_hat_i
 
 
-def test_model(x, y, n, v_inv_y, mean):
-    testing_set = data_utils.get_testing_set()
-
+def test_model(x, y, n, v_inv_y, mean, testing_set):
     sst = np.sum((testing_set[:, 3] - np.mean(testing_set[:, 3])) ** 2)
 
     sse = 0
@@ -54,8 +51,7 @@ def test_model(x, y, n, v_inv_y, mean):
 
 
 # v^{-1}y = diag(v^{-1})(y-y_hat)
-def approximation_method():
-    training_set = data_utils.get_training_set()
+def approximation_method(training_set, testing_set):
     x = training_set[:, 1]
     y = training_set[:, 2]
     z = training_set[:, 3]
@@ -87,4 +83,4 @@ def approximation_method():
 
     print('Average conditional number is: {}, total count: {} '.format((cond_numbers/n).__str__(), n.__str__()))
 
-    return test_model(x, y, n, v_inv_y, mean)
+    return test_model(x, y, n, v_inv_y, mean, testing_set)

@@ -1,6 +1,6 @@
 
 class Params:
-    M = 20
+    M = 60
     N = M * M
 
     data_sample_count = 500000

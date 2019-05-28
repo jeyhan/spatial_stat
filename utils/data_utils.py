@@ -2,14 +2,16 @@ import random as my_random
 
 from PIL import Image
 from pylab import *
+from sklearn.model_selection import KFold
 
-import math_utils
-import params_utils
+import utils.math_utils as math_utils
+import utils.params_utils as params_utils
 
 
 class DataSet:
-    fall_into_list_train = None
-    fall_into_list_test = None
+    initialized = False
+    train_list = []
+    test_list = []
 
 
 def get_stimulate_mu_cov():
@@ -39,6 +41,7 @@ def generate_data_table(mu, cov):
     M = int(params_utils.Params.M)
 
     np.random.seed(1)
+
     rand_matrix = np.random.multivariate_normal(mean=mu, cov=cov)
     rand_matrix = rand_matrix.reshape((params_utils.Params.M, params_utils.Params.M))
 
@@ -58,27 +61,34 @@ def generate_data_table(mu, cov):
 
 
 def init_data():
-    print 'initializing data....'
+    print('initializing data....')
+    DataSet.initialized = True
+
     mu, cov = get_stimulate_mu_cov()
     data_table = generate_data_table(mu, cov)
 
     my_random.seed(2)
-    training_slice = np.sort(my_random.sample(range(0, params_utils.Params.N),
-                                              int(params_utils.Params.N *
-                                                  params_utils.Params.training_testing_split_ratio)))
-    testing_slice = np.sort(np.setdiff1d(range(0, params_utils.Params.N), training_slice))
 
-    DataSet.fall_into_list_train = data_table[training_slice,]
-    DataSet.fall_into_list_test = data_table[testing_slice,]
+    kf = KFold(n_splits=params_utils.Params.k_fold_splits, shuffle=True, random_state=0)
+    for train_index, test_index in kf.split(data_table):
+        if params_utils.Params.k_fold_train_by_small:
+            DataSet.train_list.append(data_table[test_index,])
+            DataSet.test_list.append(data_table[train_index,])
+        else:
+            DataSet.train_list.append(data_table[train_index,])
+            DataSet.test_list.append(data_table[test_index,])
+
+    # print("train_list: ", DataSet.train_list)
+    # print("test_list: ", DataSet.test_list)
 
 
-def get_training_set():
-    if DataSet.fall_into_list_train is None:
+def get_training_sets():
+    if DataSet.initialized is False:
         init_data()
-    return DataSet.fall_into_list_train
+    return DataSet.train_list
 
 
-def get_testing_set():
-    if DataSet.fall_into_list_test is None:
+def get_testing_sets():
+    if DataSet.initialized is False:
         init_data()
-    return DataSet.fall_into_list_test
+    return DataSet.test_list

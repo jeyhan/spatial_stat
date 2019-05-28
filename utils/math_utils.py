@@ -1,5 +1,6 @@
 import numpy as np
-import params_utils
+
+import utils.params_utils as params_utils
 
 
 def spatial_cov(v1x, v1y, v2x, v2y):

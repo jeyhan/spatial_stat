@@ -1,4 +1,5 @@
 import numpy as np
+
 from utils import math_utils
 from utils import params_utils
 
@@ -42,11 +43,7 @@ def test_model(x, y, n, v_inv_y, mean, testing_set):
         # print('residual=={}'.format(residual))
         sse += residual ** 2
 
-    print('sse={}'.format(sse))
-    print('sst={}'.format(sst))
-
     r_2 = 1 - sse / sst
-    print('R^2={}'.format(r_2[0]))
     return r_2[0]
 
 
@@ -69,7 +66,6 @@ def approximation_method(training_set, testing_set):
 
         v_matrix = math_utils.get_v_matrix(x[neighbor_index_list,], y[neighbor_index_list,], neighbor_size)
         cond_numbers += np.linalg.cond(v_matrix)
-        # print('Conditional number is: {}'.format(cond_number.__str__()))
 
         v_matrix_inv = np.linalg.inv(v_matrix)
         pred_hat = predict_point_by_exclude_i(z, i, neighbor_index_list, v_matrix_inv)

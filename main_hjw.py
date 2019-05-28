@@ -1,13 +1,14 @@
-from methods import approximation_method as approx, tradational_method as tradit
-from utils import params_utils
-from utils import new_data_utils
 from datetime import datetime
+
+from methods import approximation_method as approx, tradational_method as tradit
+from utils import data_utils
+from utils import params_utils
 
 
 def main():
-    new_data_utils.init_data()
-    training_set = new_data_utils.get_training_set()
-    testing_set = new_data_utils.get_testing_set()
+    data_utils.init_data()
+    training_set = data_utils.get_training_set()
+    testing_set = data_utils.get_testing_set()
 
     print('\nTraditional method.')
     a = datetime.now()
@@ -28,4 +29,5 @@ def main():
     print('\nTime cost approximation is:{} seconds'.format((c - b).seconds))
 
 
+# todo: use k-fold vaildation
 main()

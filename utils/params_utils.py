@@ -1,3 +1,11 @@
+import itertools as itertool
+
+from PIL import Image
+from pylab import *
+
+import utils.math_utils as math_utils
+
+
 class Params:
     M = 20
     N = M * M
@@ -9,3 +17,23 @@ class Params:
 
     k_fold_train_by_small = True
     k_fold_splits = 10
+
+
+def get_stimulate_mu_cov():
+    im = array(Image.open('resources/origin_data.jpg').convert('L'), 'f')
+    M_0 = np.size(im, 0)
+    sample_matrix = np.zeros((Params.M, Params.M))
+    sample_mu_list = np.zeros(Params.N)
+    sample_data_table = np.zeros((Params.N, 4), dtype=float)
+    ij = itertool.product(range(Params.M), range(Params.M))
+
+    for k, (i, j) in enumerate(ij):
+        sample_matrix[i][j] = im[i * int(M_0 / Params.M)][j * int(M_0 / Params.M)]
+        sample_data_table[k][0] = k
+        sample_data_table[k][1] = i * (1.0 / Params.M) + (0.5 / Params.M)
+        sample_data_table[k][2] = j * (1.0 / Params.M) + (0.5 / Params.M)
+        sample_data_table[k][3] = sample_matrix[i][j]
+        sample_mu_list[k] = sample_matrix[i][j]
+
+    v_matrix = math_utils.get_v_matrix(sample_data_table[:, 1], sample_data_table[:, 2], Params.N)
+    return sample_mu_list, v_matrix

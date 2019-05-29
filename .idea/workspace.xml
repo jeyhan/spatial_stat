@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6e4ff75-b365-4f29-b6ec-2d4c9eacfcf0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/output/cov.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/cov.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/rand_matrix.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/data_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/params_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/params_utils.py" afterDir="false" />
     </list>
@@ -17,14 +18,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="data_utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/data_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+            <state relative-caret-position="56">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_mu_matrix.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/sample_mu_matrix.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="stimulate_matrix.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/stimulate_matrix.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="v_matrix.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/v_matrix.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="pyplot.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/pyplot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-522">
+              <caret line="2160" column="4" selection-start-line="2160" selection-start-column="4" selection-end-line="2160" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -32,8 +57,8 @@
       <file leaf-file-name="main_hjw.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_hjw.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="105">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -41,17 +66,23 @@
       <file leaf-file-name="approximation_method.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/methods/approximation_method.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-end-line="1" />
+            <state relative-caret-position="1141">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="params_utils.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="params_utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/params_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="111">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +90,17 @@
       <file leaf-file-name="tradational_method.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/methods/tradational_method.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="249">
+              <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="math_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/math_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -84,7 +124,6 @@
       <find>split_axis_ratio</find>
       <find>Params.</find>
       <find>print</find>
-      <find>Conditional number</find>
       <find>sse=</find>
       <find>data_utils.Params</find>
       <find>Conditional number is:</find>
@@ -93,6 +132,8 @@
       <find>neighbor_relative_ratio</find>
       <find>np.linalg.inv</find>
       <find>params_utils.</find>
+      <find>sigma2</find>
+      <find>Conditional number</find>
       <find>self.</find>
     </findStrings>
     <replaceStrings>
@@ -125,8 +166,8 @@
         <option value="$PROJECT_DIR$/main_hjw.py" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/utils/params_utils.py" />
         <option value="$PROJECT_DIR$/utils/data_utils.py" />
+        <option value="$PROJECT_DIR$/utils/params_utils.py" />
       </list>
     </option>
   </component>
@@ -342,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559084875514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor mu and cov into params utils">
+      <created>1559085534574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559085534574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -356,11 +404,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1440" height="821" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1775106" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1775106" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50565773" side_tool="true" weight="0.32716927" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32859176" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4943423" weight="0.32716927" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49575672" visible="true" weight="0.33428165" />
@@ -374,7 +423,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32859176" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -431,7 +479,8 @@
     <MESSAGE value="renames" />
     <MESSAGE value="k-fold" />
     <MESSAGE value="git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
+    <MESSAGE value="refactor mu and cov into params utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor mu and cov into params utils" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -440,24 +489,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>38</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>23</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>28</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>9</line>
-          <option name="timeStamp" value="57" />
+          <url>file://$PROJECT_DIR$/methods/approximation_method.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -467,7 +501,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="58" />
+      <option name="time" value="62" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -495,27 +529,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/data_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/log_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/math_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/params_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -645,12 +658,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/fine_grid_fall.png" />
-    <entry file="file://$PROJECT_DIR$/output/rand_matrix.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/sample_matrix.png" />
     <entry file="file://$PROJECT_DIR$/output/training_grid_fall.png" />
-    <entry file="file://$PROJECT_DIR$/output/v_matrix.png" />
     <entry file="file://$PROJECT_DIR$/utils/data_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1717">
@@ -676,20 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/origin_data.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file:///usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_split.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6052">
           <caret line="372" column="29" selection-start-line="372" selection-start-column="29" selection-end-line="372" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/methods/tradational_method.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -708,43 +707,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/math_utils.py">
+    <entry file="file:///usr/local/Cellar/python/3.7.1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="7" column="95" lean-forward="true" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
+        <state relative-caret-position="-522">
+          <caret line="2160" column="4" selection-start-line="2160" selection-start-column="4" selection-end-line="2160" selection-end-column="4" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/math_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/origin_data.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/output/cov.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/rand_matrix.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/data_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/v_matrix.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/sample_mu_matrix.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/stimulate_matrix.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/methods/tradational_method.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_hjw.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="105">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/methods/approximation_method.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-end-line="1" />
+        <state relative-caret-position="1141">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/params_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/data_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        <state relative-caret-position="111">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

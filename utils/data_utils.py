@@ -18,14 +18,11 @@ def generate_data_table(mu, cov):
 
     np.random.seed(1)
 
-    rand_matrix = np.random.multivariate_normal(mean=mu, cov=cov)
-    rand_matrix = rand_matrix.reshape((params_utils.Params.M, params_utils.Params.M))
+    stimulate_matrix = np.random.multivariate_normal(mean=mu, cov=cov)
+    stimulate_matrix = stimulate_matrix.reshape((params_utils.Params.M, params_utils.Params.M))
 
-    plt.matshow(rand_matrix, cmap='Greys_r')
-    plt.savefig("output/rand_matrix.png")
-
-    plt.matshow(cov, cmap='Greys_r')
-    plt.savefig("output/cov.png")
+    plt.matshow(stimulate_matrix, cmap='Greys_r')
+    plt.savefig("output/stimulate_matrix.png")
 
     data_table = np.zeros((params_utils.Params.N, 4), dtype=float)
     ij = itertool.product(range(M), range(M))
@@ -34,7 +31,7 @@ def generate_data_table(mu, cov):
         data_table[k][0] = k
         data_table[k][1] = i * (1.0 / params_utils.Params.M) + (0.5 / params_utils.Params.M)
         data_table[k][2] = j * (1.0 / params_utils.Params.M) + (0.5 / params_utils.Params.M)
-        data_table[k][3] = rand_matrix[i][j]
+        data_table[k][3] = stimulate_matrix[i][j]
 
     return data_table
 

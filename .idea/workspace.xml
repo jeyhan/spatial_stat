@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6e4ff75-b365-4f29-b6ec-2d4c9eacfcf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/output/sample_mu_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sample_mu_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/stimulate_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/stimulate_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/v_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/v_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_v2.pages" beforeDir="false" afterPath="$PROJECT_DIR$/report_v2.pages" afterDir="false" />
-    </list>
+    <list default="true" id="d6e4ff75-b365-4f29-b6ec-2d4c9eacfcf0" name="Default" comment="" />
+    <list id="dda03ea6-1c79-43b5-9878-94cf6446860e" name="New changelist" comment="" />
     <ignored path="venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="approximation_method.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="approximation_method.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/methods/approximation_method.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1141">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="204">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -62,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="params_utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="params_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/params_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="264">
+              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -156,10 +152,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
+    <option name="x" value="14" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="822" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -341,6 +337,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d6e4ff75-b365-4f29-b6ec-2d4c9eacfcf0" name="Default" comment="" />
+      <changelist id="dda03ea6-1c79-43b5-9878-94cf6446860e" name="New changelist" comment="" />
       <created>1558114393607</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -388,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559090616422</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix small">
+      <created>1559091495624</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559091495624</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -403,14 +407,14 @@
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1440" height="821" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1775106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1775106" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50565773" side_tool="true" weight="0.32716927" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32859176" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4943423" weight="0.32716927" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4943423" visible="true" weight="0.32716927" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49575672" visible="true" weight="0.33428165" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49575672" weight="0.33428165" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49787837" weight="0.32859176" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -479,7 +483,8 @@
     <MESSAGE value="git ignore" />
     <MESSAGE value="refactor mu and cov into params utils" />
     <MESSAGE value="adjust参数" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust参数" />
+    <MESSAGE value="fix small" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix small" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -488,7 +493,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/methods/approximation_method.py</url>
+          <url />
           <line>79</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
@@ -706,9 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/origin_data.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/cov.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -745,16 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/methods/approximation_method.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1141">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -771,8 +763,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/params_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="264">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/origin_data.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/methods/approximation_method.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

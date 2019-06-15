@@ -7,7 +7,7 @@ import utils.math_utils as math_utils
 
 
 class Params:
-    M = 60
+    M = 20
     N = M * M
 
     phi = 0.16
@@ -17,6 +17,23 @@ class Params:
 
     k_fold_train_by_small = True
     k_fold_splits = 10
+
+
+# absolute exponential kernel
+def exponential_covariance_function(dist):
+    exponential_variance = Params.sigma2 * np.exp(-dist / Params.phi)
+    return exponential_variance
+
+
+def once_differentiable_matern_covariance_function(dist):
+    matern_variance = Params.sigma2 * (1 + (np.sqrt(3) * dist) / Params.phi) * np.exp(-(np.sqrt(3) * dist) / Params.phi)
+    return matern_variance
+
+
+def twice_differentiable_matern_covariance_function(dist_0):
+    poly_term = 1 + (np.sqrt(5) * dist_0 / Params.phi) + ((5 * dist_0 * dist_0) / (3 * Params.phi * Params.phi))
+    matern_variance = Params.sigma2 * poly_term * np.exp(-(np.sqrt(5) * dist_0 / Params.phi))
+    return matern_variance
 
 
 def get_stimulate_mu_cov():

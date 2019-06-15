@@ -5,7 +5,7 @@ import utils.params_utils as params_utils
 
 def spatial_cov(v1x, v1y, v2x, v2y):
     dist = np.sqrt((v1x - v2x) ** 2 + (v1y - v2y) ** 2)
-    exponential_variance = params_utils.Params.sigma2 * np.exp(-dist / params_utils.Params.phi)
+    exponential_variance = params_utils.once_differentiable_matern_covariance_function(dist)
     return exponential_variance
 
 

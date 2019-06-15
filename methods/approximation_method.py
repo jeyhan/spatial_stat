@@ -69,11 +69,6 @@ def approximation_method(training_set, testing_set, params):
         v_matrix_inv = np.linalg.inv(v_matrix)
         pred_hat = predict_point_by_exclude_i(z, i, neighbor_index_list, v_matrix_inv)
 
-        #        print('Y hat ={}'.format(pred_hat))
-        #        print('Y real={}'.format(z[i]))
-
-        #        print v_matrix_inv[0][0]
-
         v_inv_y[i][0] = v_matrix_inv[0][0] * (z[i] - pred_hat)
 
     return test_model(params, x, y, n, v_inv_y, mean, testing_set), (cond_numbers / n)

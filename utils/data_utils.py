@@ -4,67 +4,70 @@ import random as my_random
 from pylab import *
 from sklearn.model_selection import KFold
 
-import utils.params_utils as params_utils
-
 
 class DataSet:
+    params = None
     initialized = False
-    train_list = []
-    test_list = []
+    train_list = None
+    test_list = None
 
+    def __init__(self, params):
+        self.params = params
+        self.initialized = False
+        self.train_list = []
+        self.test_list = []
 
-def generate_data_table(mu, cov):
-    M = int(params_utils.Params.M)
+        self.init_data()
 
-    np.random.seed(1)
+    def init_data(self):
+        print('initializing data by params....')
+        self.initialized = True
 
-    stimulate_matrix = np.random.multivariate_normal(mean=mu, cov=cov)
-    stimulate_matrix = stimulate_matrix.reshape((params_utils.Params.M, params_utils.Params.M))
+        mu, cov = self.params.get_stimulate_mu_cov()
+        data_table = self.generate_data_table(mu, cov)
 
-    plt.matshow(stimulate_matrix, cmap='Greys_r')
-    plt.savefig("output/stimulate_matrix.png")
+        my_random.seed(2)
 
-    data_table = np.zeros((params_utils.Params.N, 4), dtype=float)
-    ij = itertool.product(range(M), range(M))
+        kf = KFold(n_splits=self.params.k_fold_splits, shuffle=True, random_state=0)
+        for train_index, test_index in kf.split(data_table):
+            if self.params.k_fold_train_by_small:
+                self.train_list.append(data_table[test_index,])
+                self.test_list.append(data_table[train_index,])
+            else:
+                self.train_list.append(data_table[train_index,])
+                self.test_list.append(data_table[test_index,])
 
-    for k, (i, j) in enumerate(ij):
-        data_table[k][0] = k
-        data_table[k][1] = i * (1.0 / params_utils.Params.M) + (0.5 / params_utils.Params.M)
-        data_table[k][2] = j * (1.0 / params_utils.Params.M) + (0.5 / params_utils.Params.M)
-        data_table[k][3] = stimulate_matrix[i][j]
+        # print("train_list: ", self.train_list)
+        # print("test_list: ", self.test_list)
 
-    return data_table
+    def generate_data_table(self, mu, cov):
+        M = int(self.params.M)
 
+        np.random.seed(1)
 
-def init_data():
-    print('initializing data....')
-    DataSet.initialized = True
+        stimulate_matrix = np.random.multivariate_normal(mean=mu, cov=cov)
+        stimulate_matrix = stimulate_matrix.reshape((self.params.M, self.params.M))
 
-    mu, cov = params_utils.get_stimulate_mu_cov()
-    data_table = generate_data_table(mu, cov)
+        plt.matshow(stimulate_matrix, cmap='Greys_r')
+        plt.savefig("output/stimulate_matrix.png")
 
-    my_random.seed(2)
+        data_table = np.zeros((self.params.N, 4), dtype=float)
+        ij = itertool.product(range(M), range(M))
 
-    kf = KFold(n_splits=params_utils.Params.k_fold_splits, shuffle=True, random_state=0)
-    for train_index, test_index in kf.split(data_table):
-        if params_utils.Params.k_fold_train_by_small:
-            DataSet.train_list.append(data_table[test_index,])
-            DataSet.test_list.append(data_table[train_index,])
-        else:
-            DataSet.train_list.append(data_table[train_index,])
-            DataSet.test_list.append(data_table[test_index,])
+        for k, (i, j) in enumerate(ij):
+            data_table[k][0] = k
+            data_table[k][1] = i * (1.0 / self.params.M) + (0.5 / self.params.M)
+            data_table[k][2] = j * (1.0 / self.params.M) + (0.5 / self.params.M)
+            data_table[k][3] = stimulate_matrix[i][j]
 
-    # print("train_list: ", DataSet.train_list)
-    # print("test_list: ", DataSet.test_list)
+        return data_table
 
+    def get_training_sets(self):
+        if self.initialized is False:
+            self.init_data()
+        return self.train_list
 
-def get_training_sets():
-    if DataSet.initialized is False:
-        init_data()
-    return DataSet.train_list
-
-
-def get_testing_sets():
-    if DataSet.initialized is False:
-        init_data()
-    return DataSet.test_list
+    def get_testing_sets(self):
+        if self.initialized is False:
+            self.init_data()
+        return self.test_list

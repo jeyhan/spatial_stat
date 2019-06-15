@@ -2,3 +2,5 @@
 methods/__pycache__/
 utils/__pycache__/
 venv/
+*.txt
+output/log.txt

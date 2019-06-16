@@ -59,7 +59,7 @@ def run_approximation_method(data_set, params):
 
 
 def main():
-    dims = [20, 30, 40, 50, 60, 80, 100]
+    dims = [20, 30, 40, 50, 60, 80, 100, 120]
 
     simulations = []
     for m in dims:
